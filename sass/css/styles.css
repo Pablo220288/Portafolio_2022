@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@font-face {
+  font-family: Firma;
+  src: url("../../font/TheScientist-L3EyW.ttf") format("truetype");
+}
 * {
   padding: 0;
   margin: 0;
@@ -323,16 +327,16 @@ main .hero-section .card-grid .card .card__background {
   transition: filter 200ms linear, transform 200ms linear;
 }
 main .hero-section .card-grid .card .mbTrainer {
-  background-image: url(/assets/mbpersonaltrainer.jpg);
+  background-image: url("../../assets/mbpersonaltrainer.jpg");
 }
 main .hero-section .card-grid .card .mahalo {
-  background-image: url(/assets/mahalo.jpg);
+  background-image: url("../../assets/mahalo.jpg");
 }
 main .hero-section .card-grid .card .paralax {
-  background-image: url(/assets/paralax.jpg);
+  background-image: url("../../assets/paralax.jpg");
 }
 main .hero-section .card-grid .card .porfolio {
-  background-image: url(/assets/porfolio.jpg);
+  background-image: url("../../assets/porfolio.jpg");
 }
 main .hero-section .card-grid .card:hover .card__background {
   transform: scale(1.01) translateZ(0);
@@ -495,6 +499,12 @@ main .contact .contact-wrapper .contact-info ul li img {
 main .contact .contact-wrapper .contact-info ul li p {
   margin-bottom: 0.5rem;
 }
+main .contact .contact-wrapper .contact-info .nombre {
+  font-family: Firma;
+  font-size: 35px;
+  margin-top: 20px;
+  text-align: center;
+}
 main .contact .contact-wrapper .contact-info .redes {
   display: flex;
   justify-content: space-evenly;
@@ -540,10 +550,6 @@ main .contact .contact-wrapper .contact-info .redes .bi-whatsapp:hover {
 main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
   transition: all 500ms ease-out;
   color: #0e76a8;
-}
-main .contact .contact-wrapper .contact-info .nombre {
-  margin-top: 20px;
-  text-align: center;
 }
 
 .footer {
@@ -768,13 +774,16 @@ main .contact .contact-wrapper .contact-info .nombre {
   }
   main .contact .contact-wrapper .contact-info {
     margin-top: 0px;
-    margin-left: 25px;
+    padding-left: 25px;
   }
   main .contact .contact-wrapper .contact-info h4, main .contact .contact-wrapper .contact-info p {
     text-align: start;
   }
   main .contact .contact-wrapper .contact-info ul li {
     justify-content: start;
+  }
+  main .contact .contact-wrapper .contact-info .nombre {
+    margin-top: 60px;
   }
   .footer {
     margin-bottom: 0px;

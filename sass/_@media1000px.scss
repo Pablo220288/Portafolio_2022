@@ -115,12 +115,15 @@
             } 
             .contact-info{
                 margin-top: 0px;
-                margin-left: 25px;
+                padding-left: 25px;
                 h4, p{
                     text-align: start;
                 }
                 ul li {
                     justify-content: start;
+                }
+                .nombre{
+                    margin-top: 60px;
                 }
             } 
         }

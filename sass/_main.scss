@@ -273,16 +273,16 @@ main{
                       transform 200ms linear;
                 }
                 .mbTrainer{
-                    background-image: url(/assets/mbpersonaltrainer.jpg);
+                    background-image: url("../../assets/mbpersonaltrainer.jpg");
                 }
                 .mahalo{
-                    background-image: url(/assets/mahalo.jpg);
+                    background-image: url("../../assets/mahalo.jpg");
                 }
                 .paralax{
-                    background-image: url(/assets/paralax.jpg);
+                    background-image: url("../../assets/paralax.jpg");
                 }
                 .porfolio{
-                    background-image: url(/assets/porfolio.jpg);
+                    background-image: url("../../assets/porfolio.jpg");
                 }
                 &:hover .card__background{
                     transform: scale(1.01) translateZ(0);
@@ -446,6 +446,12 @@ main{
                         margin-bottom: 0.5rem;
                     }
                 }
+                .nombre{
+                    font-family: Firma;
+                    font-size: 35px;
+                    margin-top: 20px;
+                    text-align: center;
+                }
                 .redes{
                     display: flex;
                     justify-content: space-evenly;
@@ -500,11 +506,6 @@ main{
                         }
                     }
     
-                }
-                .nombre{
-                    margin-top: 20px;
-                    text-align: center;
-                
                 }
             }
         }
