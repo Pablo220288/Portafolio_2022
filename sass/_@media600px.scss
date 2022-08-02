@@ -1,0 +1,76 @@
+@media only screen and (min-width:600px){
+    main{
+        margin-left: 70px;
+    }
+    .main-navbar{
+        top: 0;
+        width: 70px;
+        height: 100vh;
+        transition: 0.5s all ease;
+        overflow-x: hidden;
+        &:hover{
+            width: 250px;
+        }
+        &:hover .navbar-item .navbar-link span{
+            display: block;
+            color: #000;
+            font-size: 1.3rem;
+            transition: 1s all ease-in-out;
+        }
+        .navbar-container{
+            flex-direction: column;
+            justify-content: end;
+            .logo{
+                display: block;
+                .navbar-link{
+                    color: #000;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    text-decoration: none;
+                    writing-mode: vertical-rl;
+                    margin-top: 20px;
+                     }
+                &:first-child{
+                    margin-bottom: auto;
+                }
+            }
+            .navbar-item{
+                .navbar-link{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    img{
+                        width: 30px;
+                    }
+
+                }
+            }
+
+        }
+    }
+    main .about .about-data{
+        flex-direction: column;
+        .iconos{
+            margin-top: 45px;
+            grid-template-columns: repeat(14, 23px);
+            grid-template-rows: repeat(6, 24px);
+            grid-template-areas:
+            ". . . . . . . . . . txtSass txtSass . ." 
+            "txtHtml5 txtHtml5 . . txtBootstrap txtBootstrap . . txtGit txtGit sass sass . ."
+            "html5 html5 . . bootstrap bootstrap . . gitHb gitHb sass sass js js" 
+            "html5 html5 cs3 cs3 bootstrap bootstrap git git gitHb gitHb . . js js" 
+            ". . cs3 cs3 . . git git . . . txtJs txtJs txtJs"
+            ". . txtCss3 txtCss3 . . txtGithub txtGithub . . . . . .";
+            gap: 5px;
+            #txtCss3{
+                margin-left: 0px;
+            }
+            #txtSass{
+                margin-left: 0px;
+            }
+            #txtJs{
+                margin-left: 15px;
+            }
+        }
+    } 
+}

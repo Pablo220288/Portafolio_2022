@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  text-decoration: none;
+  transition: 0.5s all ease;
+  z-index: 10;
+}
+.main-navbar .navbar-container {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+.main-navbar .navbar-container .logo {
+  display: none;
+}
+.main-navbar .navbar-container .navbar-item {
+  width: 100%;
+}
+.main-navbar .navbar-container .navbar-item .navbar-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  text-decoration: none;
+  transition: 0.5s all ease;
+}
+.main-navbar .navbar-container .navbar-item .navbar-link:hover {
+  background-color: #fc037b;
+}
+.main-navbar .navbar-container .navbar-item .navbar-link img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+.main-navbar .navbar-container .navbar-item .navbar-link span {
+  color: #000000;
+  display: none;
+}
+
+main .home-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main .home-data .pablo {
+  width: 80%;
+}
+main .home-data .pablo .p, main .home-data .pablo .a, main .home-data .pablo .b, main .home-data .pablo .l, main .home-data .pablo .o {
+  fill: #ffffff;
+  stroke: #fc037b;
+  stroke-width: 1.5px;
+}
+main .home-data .pablo .p {
+  stroke-dasharray: 425px;
+  stroke-dashoffset: -425px;
+  animation: effect-letter 0.6s linear forwards;
+}
+main .home-data .pablo .a {
+  stroke-dasharray: 330px;
+  stroke-dashoffset: -330px;
+  animation: effect-letter 0.6s 0.7s linear forwards;
+}
+main .home-data .pablo .b {
+  stroke-dasharray: 420px;
+  stroke-dashoffset: -420px;
+  animation: effect-letter 0.6s 1.4s linear forwards;
+}
+main .home-data .pablo .l {
+  stroke-dasharray: 255px;
+  stroke-dashoffset: -255px;
+  animation: effect-letter 0.6s 2.1s linear forwards;
+}
+main .home-data .pablo .o {
+  stroke-dasharray: 240px;
+  stroke-dashoffset: -240px;
+  animation: effect-letter 0.6s 2.8s linear forwards;
+}
+main .home-data p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  -webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 3.5s;
+}
+main .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 60px 0px;
+  overflow: hidden;
+  height: auto;
+}
+main .about .section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+main .about .section-title:hover {
+  transition: color 200ms ease-out;
+  color: #fc037b;
+}
+main .about .about-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-flow: column wrap;
+}
+main .about .about-data h3 {
+  flex: 2;
+  align-self: center;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+main .about .about-data .conten-about {
+  margin-top: 45px;
+  flex: 4;
+  padding: 0 50px;
+}
+main .about .about-data .conten-about p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+main .about .about-data .iconos {
+  flex: 2;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 23px);
+  grid-template-rows: repeat(6, 39px);
+  grid-template-areas: ". . html5 html5 . txtHtml5 . ." "txtCss3 . . cs3 cs3 . . ." ". . bootstrap bootstrap . txtBootstrap . ." ". txtGit . git git . . ." ". . . . gitHb gitHb . txtGithub" "txtSass . . sass sass . . ." ". . js js . txtJs . .";
+  justify-content: center;
+  gap: 3px;
+  margin-top: 30px;
+}
+main .about .about-data .iconos #html5 {
+  grid-area: html5;
+}
+main .about .about-data .iconos #txtHtml5 {
+  grid-area: txtHtml5;
+}
+main .about .about-data .iconos #cs3 {
+  grid-area: cs3;
+}
+main .about .about-data .iconos #txtCss3 {
+  grid-area: txtCss3;
+  margin-left: 15px;
+}
+main .about .about-data .iconos #bootstrap {
+  grid-area: bootstrap;
+}
+main .about .about-data .iconos #txtBootstrap {
+  grid-area: txtBootstrap;
+}
+main .about .about-data .iconos #git {
+  grid-area: git;
+}
+main .about .about-data .iconos #txtGit {
+  grid-area: txtGit;
+}
+main .about .about-data .iconos #gitHb {
+  grid-area: gitHb;
+}
+main .about .about-data .iconos #txtGithub {
+  grid-area: txtGithub;
+}
+main .about .about-data .iconos #sass {
+  grid-area: sass;
+}
+main .about .about-data .iconos #txtSass {
+  grid-area: txtSass;
+  margin-left: 15px;
+}
+main .about .about-data .iconos #js {
+  grid-area: js;
+}
+main .about .about-data .iconos #txtJs {
+  grid-area: txtJs;
+}
+main .about .about-data .iconos .txtIcono {
+  align-self: flex-end;
+  opacity: 0;
+  transition: all 500ms ease-out;
+}
+main .about .about-data .iconos .txtIcono:hover {
+  transition: all 500ms ease-out;
+  color: #fc037b;
+}
+main .about .about-data .iconos .icono-items {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+main .about .about-data .iconos .icono-items .borde {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 52px;
+  height: 52px;
+  background-color: #fc037b;
+  position: relative;
+}
+main .about .about-data .iconos .icono-items .borde img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 48px;
+  height: 48px;
+  top: 2px;
+  left: 2px;
+  position: absolute;
+}
+main .about .about-data .iconos:hover .txtIcono {
+  transition: opacity 300ms ease-out;
+  opacity: 1;
+}
+main .animated {
+  animation: spin 1s alternate;
+}
+main .proyect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 60px 0px;
+  overflow-x: hidden;
+  height: auto;
+}
+main .proyect .section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+main .proyect .section-title:hover {
+  transition: color 200ms ease-out;
+  color: #fc037b;
+}
+main .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  height: auto;
+  min-height: 100%;
+  justify-content: center;
+  padding: 60px 0px 0px 0px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+main .hero-section .card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  max-width: 1200px;
+  width: 100%;
+}
+main .hero-section .card-grid .card {
+  list-style: none;
+  position: relative;
+  height: 250px;
+}
+main .hero-section .card-grid .card:before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+main .hero-section .card-grid .card .card__background {
+  background-size: cover;
+  background-position: center;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+main .hero-section .card-grid .card .mbTrainer {
+  background-image: url(/assets/mbpersonaltrainer.jpg);
+}
+main .hero-section .card-grid .card .mahalo {
+  background-image: url(/assets/mahalo.jpg);
+}
+main .hero-section .card-grid .card .paralax {
+  background-image: url(/assets/paralax.jpg);
+}
+main .hero-section .card-grid .card .porfolio {
+  background-image: url(/assets/porfolio.jpg);
+}
+main .hero-section .card-grid .card:hover .card__background {
+  transform: scale(1.01) translateZ(0);
+}
+main .hero-section .card-grid .card .card__content {
+  left: 0;
+  padding: 32px;
+  position: absolute;
+  top: 0;
+}
+main .hero-section .card-grid .card .card__content .card__category {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+main .hero-section .card-grid .card .card__content .card__heading {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+main .hero-section .card-grid:hover > .card:not(:hover) .card__background {
+  filter: blur(5px);
+}
+main .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 60px 0px;
+  overflow-x: hidden;
+  height: auto;
+}
+main .contact .section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+main .contact .section-title:hover {
+  transition: color 200ms ease-out;
+  color: #fc037b;
+}
+main .contact .contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 60px 0px 100px 0px;
+  padding: 1.5rem;
+  width: 90%;
+  /* CONTACT INFO */
+}
+main .contact .contact-wrapper .contact-form {
+  background: #ffffff;
+}
+main .contact .contact-wrapper .contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .contact .contact-wrapper .contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+main .contact .contact-wrapper .contact-form form p label {
+  display: block;
+}
+main .contact .contact-wrapper .contact-form form .block {
+  grid-column: 1/3;
+}
+main .contact .contact-wrapper .contact-form form .block2, main .contact .contact-wrapper .contact-form form .block3 {
+  grid-column: 1/3;
+}
+main .contact .contact-wrapper .contact-form form input, main .contact .contact-wrapper .contact-form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid #fc037b;
+}
+main .contact .contact-wrapper .contact-form form textarea {
+  resize: vertical;
+  max-height: 100px;
+}
+main .contact .contact-wrapper .contact-form form button {
+  width: 100%;
+  padding: 2em;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main .contact .contact-wrapper .contact-form form button .boton-icono {
+  transition: 500ms ease-in-out all;
+  position: absolute;
+  left: 44%;
+  bottom: -50%;
+  z-index: 1;
+}
+main .contact .contact-wrapper .contact-form form button .boton-icono img {
+  width: 20px;
+  height: 20px;
+}
+main .contact .contact-wrapper .contact-form form button span {
+  transition: 500ms ease-in-out all;
+  position: absolute;
+  top: 1.3em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+main .contact .contact-wrapper .contact-form form button::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: calc(-100% - 80px);
+  border-bottom: 80px solid #fc037b;
+  border-right: 80px solid transparent;
+  transition: 0.4s ease-in-out all;
+}
+main .contact .contact-wrapper .contact-form form button:hover span {
+  top: -20px;
+}
+main .contact .contact-wrapper .contact-form form button:hover .boton-icono {
+  bottom: 26%;
+}
+main .contact .contact-wrapper .contact-form form button:hover::after {
+  left: 0;
+}
+main .contact .contact-wrapper .contact-info {
+  background: rgb(255, 255, 255);
+  margin-top: 50px;
+}
+main .contact .contact-wrapper .contact-info h4, main .contact .contact-wrapper .contact-info ul, main .contact .contact-wrapper .contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+main .contact .contact-wrapper .contact-info ul li {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+main .contact .contact-wrapper .contact-info ul li img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+main .contact .contact-wrapper .contact-info ul li p {
+  margin-bottom: 0.5rem;
+}
+main .contact .contact-wrapper .contact-info .redes {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-top: 20px;
+}
+main .contact .contact-wrapper .contact-info .redes i {
+  font-size: 25px;
+}
+main .contact .contact-wrapper .contact-info .redes img {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+}
+main .contact .contact-wrapper .contact-info .redes img:hover {
+  transform: scale(1.1);
+}
+main .contact .contact-wrapper .contact-info .redes a {
+  color: #000;
+  font-size: 25px;
+  transition: all 500ms ease-out;
+}
+main .contact .contact-wrapper .contact-info .redes svg {
+  width: 27px;
+  height: 27px;
+  align-self: center;
+  fill: #000000;
+}
+main .contact .contact-wrapper .contact-info .redes .bi-facebook:hover {
+  transition: all 500ms ease-out;
+  color: #3b5998;
+}
+main .contact .contact-wrapper .contact-info .redes .bi-instagram:hover {
+  transition: all 500ms ease-out;
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+main .contact .contact-wrapper .contact-info .redes .bi-whatsapp:hover {
+  transition: all 500ms ease-out;
+  color: #25d366;
+}
+main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
+  transition: all 500ms ease-out;
+  color: #0e76a8;
+}
+main .contact .contact-wrapper .contact-info .nombre {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  vertical-align: bottom;
+  margin-bottom: 100px;
+}
+.footer .copyright {
+  font-size: 10px;
+  font-weight: 600;
+  color: black;
+}
+
+@keyframes effect-letter {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-width: 600px) {
+  main {
+    margin-left: 70px;
+  }
+  .main-navbar {
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    transition: 0.5s all ease;
+    overflow-x: hidden;
+  }
+  .main-navbar:hover {
+    width: 250px;
+  }
+  .main-navbar:hover .navbar-item .navbar-link span {
+    display: block;
+    color: #000;
+    font-size: 1.3rem;
+    transition: 1s all ease-in-out;
+  }
+  .main-navbar .navbar-container {
+    flex-direction: column;
+    justify-content: end;
+  }
+  .main-navbar .navbar-container .logo {
+    display: block;
+  }
+  .main-navbar .navbar-container .logo .navbar-link {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    margin-top: 20px;
+  }
+  .main-navbar .navbar-container .logo:first-child {
+    margin-bottom: auto;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link img {
+    width: 30px;
+  }
+  main .about .about-data {
+    flex-direction: column;
+  }
+  main .about .about-data .iconos {
+    margin-top: 45px;
+    grid-template-columns: repeat(14, 23px);
+    grid-template-rows: repeat(6, 24px);
+    grid-template-areas: ". . . . . . . . . . txtSass txtSass . ." "txtHtml5 txtHtml5 . . txtBootstrap txtBootstrap . . txtGit txtGit sass sass . ." "html5 html5 . . bootstrap bootstrap . . gitHb gitHb sass sass js js" "html5 html5 cs3 cs3 bootstrap bootstrap git git gitHb gitHb . . js js" ". . cs3 cs3 . . git git . . . txtJs txtJs txtJs" ". . txtCss3 txtCss3 . . txtGithub txtGithub . . . . . .";
+    gap: 5px;
+  }
+  main .about .about-data .iconos #txtCss3 {
+    margin-left: 0px;
+  }
+  main .about .about-data .iconos #txtSass {
+    margin-left: 0px;
+  }
+  main .about .about-data .iconos #txtJs {
+    margin-left: 15px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main {
+    margin-left: 0px;
+  }
+  .main-navbar {
+    top: 5px;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .main-navbar:hover {
+    width: 100%;
+  }
+  .main-navbar:hover .navbar-item .navbar-link span {
+    font-size: 1rem;
+    transition: 1s all ease-in-out;
+  }
+  .main-navbar .navbar-container {
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 100px;
+  }
+  .main-navbar .navbar-container .logo {
+    width: 100%;
+    align-self: center;
+  }
+  .main-navbar .navbar-container .logo .navbar-link {
+    font-size: 1rem;
+    writing-mode: unset;
+  }
+  .main-navbar .navbar-container .logo:first-child {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .main-navbar .navbar-container .logo span {
+    margin-left: 100px;
+  }
+  .main-navbar .navbar-container .navbar-item {
+    width: 20%;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link img {
+    display: none;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link .link-text {
+    display: block;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link:hover {
+    background: #ffffff;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link:hover .link-text {
+    transition: all 0.1s ease;
+    color: #fc037b;
+  }
+  main .about {
+    padding: 120px 0px 50px 0px;
+  }
+  main .about .about-data {
+    flex-direction: row;
+  }
+  main .about .about-data .conten-about {
+    padding: 0 20px;
+  }
+  main .about .about-data .iconos {
+    margin-top: 0px;
+    grid-template-columns: repeat(8, 23px);
+    grid-template-rows: repeat(6, 39px);
+    grid-template-areas: ". . html5 html5 . txtHtml5 . ." "txtCss3 . . cs3 cs3 . . ." ". . bootstrap bootstrap . txtBootstrap . ." ". txtGit . git git . . ." ". . . . gitHb gitHb . txtGithub" "txtSass . . sass sass . . ." ". . js js . txtJs . .";
+    justify-content: center;
+    gap: 3px;
+  }
+  main .about .about-data .iconos #txtCss3 {
+    margin-left: 15px;
+  }
+  main .about .about-data .iconos #txtSass {
+    margin-left: 15px;
+  }
+  main .about .about-data .iconos #txtJs {
+    margin-left: 0px;
+  }
+  main .proyect {
+    padding: 120px 0px 50px 0px;
+  }
+  main .hero-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .hero-section .card-grid .card {
+    height: 300px;
+  }
+  main .contact {
+    padding: 120px 0px 50px 0px;
+  }
+  main .contact .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  main .contact .contact-wrapper .contact-form form .block2 {
+    grid-column: 1/2;
+  }
+  main .contact .contact-wrapper .contact-form form .block3 {
+    grid-column: 2/3;
+  }
+  main .contact .contact-wrapper .contact-form form h4, main .contact .contact-wrapper .contact-form form ul, main .contact .contact-wrapper .contact-form form p {
+    text-align: left;
+  }
+  main .contact .contact-wrapper .contact-info {
+    margin-top: 0px;
+    margin-left: 25px;
+  }
+  main .contact .contact-wrapper .contact-info h4, main .contact .contact-wrapper .contact-info p {
+    text-align: start;
+  }
+  main .contact .contact-wrapper .contact-info ul li {
+    justify-content: start;
+  }
+  .footer {
+    margin-bottom: 0px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
