@@ -8,6 +8,7 @@
         width: 100%;
         height: 80px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        overflow-x: visible;
         &:hover{
             width: 100%;
         }
@@ -18,7 +19,6 @@
         .navbar-container{
             flex-direction: row;
             justify-content:right;
-            margin-right: 100px;
             .logo{
                 width: 100%;
                 align-self:center;
@@ -37,8 +37,15 @@
             .navbar-item{
                 width: 20%;
                 .navbar-link{
+                    &:hover{
+                        border-right: 0px;
+                        border-bottom: 3px solid $textPink;
+                    }
                     img{
                         display: none;
+                    }
+                    span{
+                        font-size: 1rem;
                     }
                     .link-text{
                         display: block;
@@ -48,42 +55,56 @@
                     }
                     &:hover .link-text{
                         transition: all 0.1s ease;
-                        color: #fc037b;
+                        color: $textPink;
+                    }
+                }
+                .lenguage{
+                    margin-left: 100px;
+                    margin-right: 20px;
+                    &:hover{
+                        border-right: 0px;
+                        border-bottom: 3px solid $textPink;
+                    }
+                    input{
+                        &:checked ~ ul{
+                            right: -10px;
+                            top: 80px
+                        }
+                    }
+                    label{
+                        span{
+                            display: none;
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 80px;
+                        right: -150px;
                     }
                 }
             }
+            }
+
+    }
+    main .home-data {
+        .pablo{
+            margin: 85px 0px 0px 0px;
+        }
+        p{
+            bottom: 40px;
         }
     }
     main .about {
         padding: 120px 0px 50px 0px;
         .about-data{
             flex-direction: row;
-            .conten-about{
-                padding: 0 20px;
+            margin: 0 20px;
+            > img{
+                width: 20%;
+                padding: 20px;
             }
-            .iconos{
-                margin-top: 0px;
-                grid-template-columns: repeat(8, 23px);
-                grid-template-rows: repeat(6, 39px);
-                grid-template-areas: 
-                ". . html5 html5 . txtHtml5 . ." 
-                "txtCss3 . . cs3 cs3 . . ." 
-                ". . bootstrap bootstrap . txtBootstrap . ." 
-                ". txtGit . git git . . ." 
-                ". . . . gitHb gitHb . txtGithub" 
-                "txtSass . . sass sass . . ."
-                ". . js js . txtJs . .";
-                justify-content: center;
-                gap: 3px;
-                #txtCss3{
-                    margin-left: 15px;
-                }
-                #txtSass{
-                    margin-left: 15px;
-                }
-                #txtJs{
-                    margin-left: 0px;
-                }
+            .conten-about{
+                padding: 0 60px;
             }
         }
     }
@@ -128,8 +149,5 @@
             } 
         }
 
-    }
-    .footer{
-        margin-bottom: 0px;
     }
 }

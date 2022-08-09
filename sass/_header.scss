@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 60px;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
 	background: #ffffff;
     text-decoration: none;
@@ -12,31 +12,90 @@
         list-style: none;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         height: 100%;
         .logo{
             display: none;
         }
         .navbar-item{
             width: 100%;
-                .navbar-link{
+            .navbar-link{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                height: 80px;
+                height: 60px;
                 text-decoration: none;
-                transition: 0.5s all ease;
                 &:hover{
-                    background-color: #fc037b;
+                    border-top: 3px solid $textPink;
                 }
                 img{
-                    width: 40px;
-                    margin-bottom: 5px;
+                    width: 30px;
                 }
                 span{
                     color: #000000;
+                    font-size: 0.6rem;
+                    margin-top: 4px;
+                }
+            }
+            .lenguage{
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                &:hover{
+                    border-top: 3px solid $textPink;
+                }
+                input{
                     display: none;
+                    &:checked ~ ul{
+                        right: 10px;
+                    }
+                }
+                label{
+                    width: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 30px;
+                    }
+                    span{
+                        color: #000000;
+                        font-size: 0.6rem;
+                        margin-top: 4px;
+                    }
+                }
+                img{
+                    width: 40px;                
+                }
+                ul{
+                    position: absolute;
+                    top: -90px;
+                    right: -130px;
+                    background-color: #ffffff;
+                    border-radius: 2px;
+                    filter:drop-shadow(0 1px 4px rgb(0 0 0 / 40%));
+                    padding: 0px 5px;
+                    z-index: -1;
+                    transition: all 300ms ease-out;
+                    li{
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            color: #000000;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            p{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }

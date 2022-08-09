@@ -1,12 +1,3 @@
-
-//Colores Redes
-$colorsRedes:(
-    face:#3b5998,
-    wtsp:#25d366,
-    insta: radial-gradient(circle at 33% 100%,#fed373 4%,#f15245 30%,#d92e7f 62%,#9b36b7 85%,#515ecf),
-	in:#0e76a8,
-	);
-
 main{
     .home-data{
         display: flex;
@@ -14,46 +5,83 @@ main{
         justify-content: center;
         align-items: center;
         height: 100vh; 
+        position: relative;
         .pablo {
             width: 80%;
-            .p, .a, .b, .l, .o{
-                fill: #ffffff;
-                stroke: #fc037b;
-                stroke-width: 1.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            .capa-p, .capa-ab, .capa-l, .capa-o, .capa-h, .capa-e, .capa-n, .capa-an, .capa-de, .capa-z{
+                fill: none;
+                stroke: #fff;
             }
-            .p{
-                stroke-dasharray: 425px;
-                stroke-dashoffset: -425px;
-                animation: effect-letter 0.6s linear forwards;
+            .capa-p {
+                stroke-dasharray: 800;
+                stroke-dashoffset: 800;
+                animation: effect-letter 0.5s linear forwards;
             }
-            .a{
-                stroke-dasharray: 330px;
-                stroke-dashoffset: -330px;
-                animation: effect-letter 0.6s 0.7s linear forwards;
+            .capa-ab {
+                stroke-dasharray: 255;
+                stroke-dashoffset: 255;
+                animation: effect-letter 0.4s 0.5s linear forwards;
             }
-            .b{
-                stroke-dasharray: 420px;
-                stroke-dashoffset: -420px;
-                animation: effect-letter 0.6s 1.4s linear forwards;
+            .capa-l {
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: effect-letter 0.2s 0.9s linear forwards;
             }
-            .l{
-                stroke-dasharray: 255px;
-                stroke-dashoffset: -255px;
-                animation: effect-letter 0.6s 2.1s linear forwards;
+            .capa-o {
+                stroke-dasharray: 65;
+                stroke-dashoffset: 65;
+                animation: effect-letter 0.2s 1.15s linear forwards;
             }
-            .o{
-                stroke-dasharray: 240px;
-                stroke-dashoffset: -240px;
-                animation: effect-letter 0.6s 2.8s linear forwards;
+            .capa-h {
+                stroke-dasharray: 750;
+                stroke-dashoffset: 750;
+                animation: effect-letter 0.5s 1.35s linear forwards;
+            }
+            .capa-e {
+                stroke-dasharray: 140;
+                stroke-dashoffset: 140;
+                animation: effect-letter 0.3s 1.85s linear forwards;
+            }
+            .capa-n {
+                stroke-dasharray: 50;
+                stroke-dashoffset: 50;
+                animation: effect-letter 0.2s 2.15s linear forwards;
+            }
+            .capa-an {
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: effect-letter 0.3s 2.35s linear forwards;
+            }
+            .capa-de {
+                stroke-dasharray: 195;
+                stroke-dashoffset: 195;
+                animation: effect-letter 0.3s 2.65s linear forwards;
+            }
+            .capa-z {
+                stroke-dasharray: 120;
+                stroke-dashoffset: 120;
+                animation: effect-letter 0.2s 2.95s linear forwards;
             }
         } 
-        p{
-            font-size: 1.2rem;
+         p{
+            position: absolute;
+            bottom: 80px;
+            font-size: 1rem;
             font-weight: 500;
             -webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation-delay: 3.5s;
-            
+            .inicio{
+                margin-right: 20px;
+            }
+            .fin{
+                margin-left: 20px;
+            }
         }
     }
     //about
@@ -70,11 +98,11 @@ main{
         .section-title{
             font-size: 2rem;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 5rem;
             font-weight: 600;
             &:hover{
                 transition: color 200ms ease-out;
-                color: #fc037b;
+                color: $textPink;
             }
         }
         .about-data {
@@ -84,120 +112,187 @@ main{
             align-content: center;
             text-align: center;
             flex-flow: column wrap;
-            h3 {
-                flex: 2;
+            .foto {
+                width: 300px;
+                height: 300px;
+                position: relative;
                 align-self: center;
-                font-size: 2rem;
-                text-align: center;
-                margin-bottom: 1.5rem;
-                font-weight: 600;
+                margin: 1.5rem;
+                transition: 400ms ease-in;
+                z-index: 100;
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 200px;
+                    height: 200px;
+                    border: 8px solid $textPink;
+                    transform: translate(-20px, -22px);
+                    transition: 400ms ease-in;
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 200px;
+                    height: 200px;
+                    border: 8px solid $textPink;
+                    transform: translate(107px, -110px);
+                    z-index: -10;
+                    transition: 400ms ease-in;
+                }
+                span{
+                    position: absolute;
+                    inset: 0;
+                    transition: 400ms ease-in;
+                    background-image: url("../../assets/about.jpg");
+                    background-size: cover;
+                    backface-visibility: hidden;
+                    &:nth-child(1){
+                        clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+                        transform:perspective(200px) translateZ(-5px) translate(-2px, -2px);
+                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                    }
+                    &:nth-child(2){
+                        clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+                        transform: perspective(200px) translateZ(5px) translate(2px, -2px);
+                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                    }
+                    &:nth-child(3){
+                        clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+                        transform: perspective(200px) translateZ(5px) translate(-2px, 2px);
+                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                    }
+                    &:nth-child(4){
+                        clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+                        transform: perspective(200px) translateZ(-5px) translate(2px, 2px);
+                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                    }
+                }
+                &:hover span:nth-child(1){
+                    transform:perspective(200px) translateZ(0px);
+                    filter: brightness(1) saturate(1) contrast(1);
+                }
+                &:hover span:nth-child(2){
+                    transform: perspective(200px) translateZ(0px);
+                    filter: brightness(1) saturate(1) contrast(1);
+                }
+                &:hover span:nth-child(3){
+                    transform: perspective(200px) translateZ(0px);
+                    filter: brightness(1) saturate(1) contrast(1);
+                }
+                &:hover span:nth-child(4){
+                    transform: perspective(200px) translateZ(0px);
+                    filter: brightness(1) saturate(1) contrast(1);
+                }
+
             }
             .conten-about{
                 margin-top: 45px;
-                flex: 4;
+                flex: 3;
                 padding: 0 50px;
                 p{
                     margin-bottom: 15px;
                     text-align: justify;
                 }
             }
-            .iconos{
-                flex: 2;
-                width: 75%;
-                margin-left: auto;
-                margin-right: auto;
-                display: grid;
-                grid-template-columns: repeat(8, 23px);
-                grid-template-rows: repeat(6, 39px);
-                grid-template-areas: 
-                ". . html5 html5 . txtHtml5 . ." 
-                "txtCss3 . . cs3 cs3 . . ." 
-                ". . bootstrap bootstrap . txtBootstrap . ." 
-                ". txtGit . git git . . ." 
-                ". . . . gitHb gitHb . txtGithub" 
-                "txtSass . . sass sass . . ."
-                ". . js js . txtJs . .";
-                justify-content: center;
-                gap: 3px;
-                margin-top: 30px;
-                #html5{
-                    grid-area: html5;
-                }
-                #txtHtml5{
-                    grid-area: txtHtml5;
-                }
-                #cs3{
-                    grid-area: cs3;
-                }
-                #txtCss3{
-                    grid-area: txtCss3;
-                    margin-left: 15px;
-                }
-                #bootstrap{
-                    grid-area: bootstrap;
-                }
-                #txtBootstrap{
-                    grid-area: txtBootstrap;
-                }
-                #git{
-                    grid-area: git;
-                }
-                #txtGit{
-                    grid-area: txtGit;
-                }
-                #gitHb{
-                    grid-area: gitHb;
-                }
-                #txtGithub{
-                    grid-area: txtGithub;
-                }
-                #sass{
-                    grid-area: sass;
-                }
-                #txtSass{
-                    grid-area: txtSass;
-                    margin-left: 15px;
-                }
-                #js{
-                    grid-area: js;
-                }
-                #txtJs{
-                    grid-area: txtJs;
-                }
-                .txtIcono{
-                    align-self: flex-end;
-                    opacity: 0;
+            
+        }
+        .iconos{
+            flex: 2;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(8, 23px);
+            grid-template-rows: repeat(6, 39px);
+            grid-template-areas: 
+            ". . html5 html5 . txtHtml5 . ." 
+            "txtCss3 . . cs3 cs3 . . ." 
+            ". . bootstrap bootstrap . txtBootstrap . ." 
+            ". txtGit . git git . . ." 
+            ". . . . gitHb gitHb . txtGithub" 
+            "txtSass . . sass sass . . ."
+            ". . js js . txtJs . .";
+            justify-content: center;
+            gap: 3px;
+            margin-top: 30px;
+            #html5{
+                grid-area: html5;
+            }
+            #txtHtml5{
+                grid-area: txtHtml5;
+            }
+            #cs3{
+                grid-area: cs3;
+            }
+            #txtCss3{
+                grid-area: txtCss3;
+                margin-left: 15px;
+            }
+            #bootstrap{
+                grid-area: bootstrap;
+            }
+            #txtBootstrap{
+                grid-area: txtBootstrap;
+            }
+            #git{
+                grid-area: git;
+            }
+            #txtGit{
+                grid-area: txtGit;
+            }
+            #gitHb{
+                grid-area: gitHb;
+            }
+            #txtGithub{
+                grid-area: txtGithub;
+            }
+            #sass{
+                grid-area: sass;
+            }
+            #txtSass{
+                grid-area: txtSass;
+                margin-left: 15px;
+            }
+            #js{
+                grid-area: js;
+            }
+            #txtJs{
+                grid-area: txtJs;
+            }
+            .txtIcono{
+                align-self: flex-end;
+                opacity: 0;
+                transition: all 500ms ease-out;
+                &:hover{
                     transition: all 500ms ease-out;
-                    &:hover{
-                        transition: all 500ms ease-out;
-                        color: #fc037b;
-                    }
+                    color: $textPink;
                 }
-                .icono-items{
-                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
-                    .borde{
+            }
+            .icono-items{
+                filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+                .borde{
+                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    width: 52px;
+                    height: 52px;
+                    background-color: $textPink;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
                         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                        width: 52px;
-                        height: 52px;
-                        background-color: #fc037b;
-                        position: relative;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            background-color: #fff;
-                            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                            width: 48px;
-                            height: 48px;
-                            top: 2px;
-                            left: 2px;
-                            position: absolute;
-                        }
+                        width: 48px;
+                        height: 48px;
+                        top: 2px;
+                        left: 2px;
+                        position: absolute;
                     }
                 }
-                &:hover .txtIcono{
-                    transition: opacity 300ms ease-out;
-                    opacity: 1;
-                }
+            }
+            &:hover .txtIcono{
+                transition: opacity 300ms ease-out;
+                opacity: 1;
             }
         }
     }
@@ -222,7 +317,7 @@ main{
             font-weight: 600;
             &:hover{
                 transition: color 200ms ease-out;
-                color: #fc037b;
+                color: $textPink;
             }
         }
     }
@@ -329,7 +424,7 @@ main{
             font-weight: 600;
             &:hover{
                 transition: color 200ms ease-out;
-                color: #fc037b;
+                color: $textPink;
             }
         }
         .contact-wrapper {
@@ -363,7 +458,7 @@ main{
                         background: none;
                         outline: 0;
                         color: rgb(0, 0, 0);
-                        border-bottom: 1px solid #fc037b;
+                        border-bottom: 1px solid $textPink;
                     }
                     textarea{
                         resize:vertical;
@@ -392,14 +487,17 @@ main{
                             }
                         }
                         span {
+                            color: rgb(0, 0, 0);
                             transition: 500ms ease-in-out all;
                             position: absolute;
-                            top: 1.3em;
+                            top: 1.2em;
                             left: 0;
                             right: 0;
                             bottom: 0;
                             margin: auto;
                             z-index: 1;
+                            font-size: 1rem;
+                            font-weight: 500;
                         }
                         &::after{
                             content: "";
@@ -408,11 +506,10 @@ main{
                             z-index: 0;
                             top: 0;
                             left: calc(-100% - 80px);
-                            border-bottom: 80px solid #fc037b;
+                            border-bottom: 80px solid $textPink;
                             border-right: 80px solid transparent;
                             transition: .4s ease-in-out all;
                         }
-                    
                         &:hover span{
                             top: -20px;
                         }
@@ -505,7 +602,6 @@ main{
                             color:map-get($colorsRedes, in)
                         }
                     }
-    
                 }
             }
         }

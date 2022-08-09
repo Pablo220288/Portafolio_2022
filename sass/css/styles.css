@@ -26,11 +26,27 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar:window-inactive {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fc037b;
+}
+
 .main-navbar {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 60px;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   background: #ffffff;
   text-decoration: none;
@@ -41,7 +57,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100%;
 }
 .main-navbar .navbar-container .logo {
@@ -55,20 +71,79 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 60px;
   text-decoration: none;
-  transition: 0.5s all ease;
 }
 .main-navbar .navbar-container .navbar-item .navbar-link:hover {
-  background-color: #fc037b;
+  border-top: 3px solid #fc037b;
 }
 .main-navbar .navbar-container .navbar-item .navbar-link img {
-  width: 40px;
-  margin-bottom: 5px;
+  width: 30px;
 }
 .main-navbar .navbar-container .navbar-item .navbar-link span {
   color: #000000;
+  font-size: 0.6rem;
+  margin-top: 4px;
+}
+.main-navbar .navbar-container .navbar-item .lenguage {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main-navbar .navbar-container .navbar-item .lenguage:hover {
+  border-top: 3px solid #fc037b;
+}
+.main-navbar .navbar-container .navbar-item .lenguage input {
   display: none;
+}
+.main-navbar .navbar-container .navbar-item .lenguage input:checked ~ ul {
+  right: 10px;
+}
+.main-navbar .navbar-container .navbar-item .lenguage label {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-navbar .navbar-container .navbar-item .lenguage label img {
+  width: 30px;
+}
+.main-navbar .navbar-container .navbar-item .lenguage label span {
+  color: #000000;
+  font-size: 0.6rem;
+  margin-top: 4px;
+}
+.main-navbar .navbar-container .navbar-item .lenguage img {
+  width: 40px;
+}
+.main-navbar .navbar-container .navbar-item .lenguage ul {
+  position: absolute;
+  top: -90px;
+  right: -130px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+  padding: 0px 5px;
+  z-index: -1;
+  transition: all 300ms ease-out;
+}
+.main-navbar .navbar-container .navbar-item .lenguage ul li {
+  list-style: none;
+}
+.main-navbar .navbar-container .navbar-item .lenguage ul li a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.main-navbar .navbar-container .navbar-item .lenguage ul li a p {
+  margin-left: 10px;
 }
 
 main .home-data {
@@ -77,46 +152,84 @@ main .home-data {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 main .home-data .pablo {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-main .home-data .pablo .p, main .home-data .pablo .a, main .home-data .pablo .b, main .home-data .pablo .l, main .home-data .pablo .o {
-  fill: #ffffff;
-  stroke: #fc037b;
-  stroke-width: 1.5px;
+main .home-data .pablo .capa-p, main .home-data .pablo .capa-ab, main .home-data .pablo .capa-l, main .home-data .pablo .capa-o, main .home-data .pablo .capa-h, main .home-data .pablo .capa-e, main .home-data .pablo .capa-n, main .home-data .pablo .capa-an, main .home-data .pablo .capa-de, main .home-data .pablo .capa-z {
+  fill: none;
+  stroke: #fff;
 }
-main .home-data .pablo .p {
-  stroke-dasharray: 425px;
-  stroke-dashoffset: -425px;
-  animation: effect-letter 0.6s linear forwards;
+main .home-data .pablo .capa-p {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: effect-letter 0.5s linear forwards;
 }
-main .home-data .pablo .a {
-  stroke-dasharray: 330px;
-  stroke-dashoffset: -330px;
-  animation: effect-letter 0.6s 0.7s linear forwards;
+main .home-data .pablo .capa-ab {
+  stroke-dasharray: 255;
+  stroke-dashoffset: 255;
+  animation: effect-letter 0.4s 0.5s linear forwards;
 }
-main .home-data .pablo .b {
-  stroke-dasharray: 420px;
-  stroke-dashoffset: -420px;
-  animation: effect-letter 0.6s 1.4s linear forwards;
+main .home-data .pablo .capa-l {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: effect-letter 0.2s 0.9s linear forwards;
 }
-main .home-data .pablo .l {
-  stroke-dasharray: 255px;
-  stroke-dashoffset: -255px;
-  animation: effect-letter 0.6s 2.1s linear forwards;
+main .home-data .pablo .capa-o {
+  stroke-dasharray: 65;
+  stroke-dashoffset: 65;
+  animation: effect-letter 0.2s 1.15s linear forwards;
 }
-main .home-data .pablo .o {
-  stroke-dasharray: 240px;
-  stroke-dashoffset: -240px;
-  animation: effect-letter 0.6s 2.8s linear forwards;
+main .home-data .pablo .capa-h {
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  animation: effect-letter 0.5s 1.35s linear forwards;
+}
+main .home-data .pablo .capa-e {
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: effect-letter 0.3s 1.85s linear forwards;
+}
+main .home-data .pablo .capa-n {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: effect-letter 0.2s 2.15s linear forwards;
+}
+main .home-data .pablo .capa-an {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: effect-letter 0.3s 2.35s linear forwards;
+}
+main .home-data .pablo .capa-de {
+  stroke-dasharray: 195;
+  stroke-dashoffset: 195;
+  animation: effect-letter 0.3s 2.65s linear forwards;
+}
+main .home-data .pablo .capa-z {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: effect-letter 0.2s 2.95s linear forwards;
 }
 main .home-data p {
-  font-size: 1.2rem;
+  position: absolute;
+  bottom: 80px;
+  font-size: 1rem;
   font-weight: 500;
   -webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: 3.5s;
+}
+main .home-data p .inicio {
+  margin-right: 20px;
+}
+main .home-data p .fin {
+  margin-left: 20px;
 }
 main .about {
   display: flex;
@@ -132,7 +245,7 @@ main .about {
 main .about .section-title {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
   font-weight: 600;
 }
 main .about .section-title:hover {
@@ -147,24 +260,89 @@ main .about .about-data {
   text-align: center;
   flex-flow: column wrap;
 }
-main .about .about-data h3 {
-  flex: 2;
+main .about .about-data .foto {
+  width: 300px;
+  height: 300px;
+  position: relative;
   align-self: center;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  margin: 1.5rem;
+  transition: 400ms ease-in;
+  z-index: 100;
+}
+main .about .about-data .foto:before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 8px solid #fc037b;
+  transform: translate(-20px, -22px);
+  transition: 400ms ease-in;
+}
+main .about .about-data .foto:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 8px solid #fc037b;
+  transform: translate(107px, -110px);
+  z-index: -10;
+  transition: 400ms ease-in;
+}
+main .about .about-data .foto span {
+  position: absolute;
+  inset: 0;
+  transition: 400ms ease-in;
+  background-image: url("../../assets/about.jpg");
+  background-size: cover;
+  backface-visibility: hidden;
+}
+main .about .about-data .foto span:nth-child(1) {
+  clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+  transform: perspective(200px) translateZ(-5px) translate(-2px, -2px);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+main .about .about-data .foto span:nth-child(2) {
+  clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+  transform: perspective(200px) translateZ(5px) translate(2px, -2px);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+main .about .about-data .foto span:nth-child(3) {
+  clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+  transform: perspective(200px) translateZ(5px) translate(-2px, 2px);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+main .about .about-data .foto span:nth-child(4) {
+  clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+  transform: perspective(200px) translateZ(-5px) translate(2px, 2px);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+main .about .about-data .foto:hover span:nth-child(1) {
+  transform: perspective(200px) translateZ(0px);
+  filter: brightness(1) saturate(1) contrast(1);
+}
+main .about .about-data .foto:hover span:nth-child(2) {
+  transform: perspective(200px) translateZ(0px);
+  filter: brightness(1) saturate(1) contrast(1);
+}
+main .about .about-data .foto:hover span:nth-child(3) {
+  transform: perspective(200px) translateZ(0px);
+  filter: brightness(1) saturate(1) contrast(1);
+}
+main .about .about-data .foto:hover span:nth-child(4) {
+  transform: perspective(200px) translateZ(0px);
+  filter: brightness(1) saturate(1) contrast(1);
 }
 main .about .about-data .conten-about {
   margin-top: 45px;
-  flex: 4;
+  flex: 3;
   padding: 0 50px;
 }
 main .about .about-data .conten-about p {
   margin-bottom: 15px;
   text-align: justify;
 }
-main .about .about-data .iconos {
+main .about .iconos {
   flex: 2;
   width: 75%;
   margin-left: auto;
@@ -177,70 +355,70 @@ main .about .about-data .iconos {
   gap: 3px;
   margin-top: 30px;
 }
-main .about .about-data .iconos #html5 {
+main .about .iconos #html5 {
   grid-area: html5;
 }
-main .about .about-data .iconos #txtHtml5 {
+main .about .iconos #txtHtml5 {
   grid-area: txtHtml5;
 }
-main .about .about-data .iconos #cs3 {
+main .about .iconos #cs3 {
   grid-area: cs3;
 }
-main .about .about-data .iconos #txtCss3 {
+main .about .iconos #txtCss3 {
   grid-area: txtCss3;
   margin-left: 15px;
 }
-main .about .about-data .iconos #bootstrap {
+main .about .iconos #bootstrap {
   grid-area: bootstrap;
 }
-main .about .about-data .iconos #txtBootstrap {
+main .about .iconos #txtBootstrap {
   grid-area: txtBootstrap;
 }
-main .about .about-data .iconos #git {
+main .about .iconos #git {
   grid-area: git;
 }
-main .about .about-data .iconos #txtGit {
+main .about .iconos #txtGit {
   grid-area: txtGit;
 }
-main .about .about-data .iconos #gitHb {
+main .about .iconos #gitHb {
   grid-area: gitHb;
 }
-main .about .about-data .iconos #txtGithub {
+main .about .iconos #txtGithub {
   grid-area: txtGithub;
 }
-main .about .about-data .iconos #sass {
+main .about .iconos #sass {
   grid-area: sass;
 }
-main .about .about-data .iconos #txtSass {
+main .about .iconos #txtSass {
   grid-area: txtSass;
   margin-left: 15px;
 }
-main .about .about-data .iconos #js {
+main .about .iconos #js {
   grid-area: js;
 }
-main .about .about-data .iconos #txtJs {
+main .about .iconos #txtJs {
   grid-area: txtJs;
 }
-main .about .about-data .iconos .txtIcono {
+main .about .iconos .txtIcono {
   align-self: flex-end;
   opacity: 0;
   transition: all 500ms ease-out;
 }
-main .about .about-data .iconos .txtIcono:hover {
+main .about .iconos .txtIcono:hover {
   transition: all 500ms ease-out;
   color: #fc037b;
 }
-main .about .about-data .iconos .icono-items {
+main .about .iconos .icono-items {
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
-main .about .about-data .iconos .icono-items .borde {
+main .about .iconos .icono-items .borde {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 52px;
   height: 52px;
   background-color: #fc037b;
   position: relative;
 }
-main .about .about-data .iconos .icono-items .borde img {
+main .about .iconos .icono-items .borde img {
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -251,7 +429,7 @@ main .about .about-data .iconos .icono-items .borde img {
   left: 2px;
   position: absolute;
 }
-main .about .about-data .iconos:hover .txtIcono {
+main .about .iconos:hover .txtIcono {
   transition: opacity 300ms ease-out;
   opacity: 1;
 }
@@ -449,14 +627,17 @@ main .contact .contact-wrapper .contact-form form button .boton-icono img {
   height: 20px;
 }
 main .contact .contact-wrapper .contact-form form button span {
+  color: rgb(0, 0, 0);
   transition: 500ms ease-in-out all;
   position: absolute;
-  top: 1.3em;
+  top: 1.2em;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
   z-index: 1;
+  font-size: 1rem;
+  font-weight: 500;
 }
 main .contact .contact-wrapper .contact-form form button::after {
   content: "";
@@ -610,20 +791,11 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
     width: 70px;
     height: 100vh;
     transition: 0.5s all ease;
-    overflow-x: hidden;
-  }
-  .main-navbar:hover {
-    width: 250px;
-  }
-  .main-navbar:hover .navbar-item .navbar-link span {
-    display: block;
-    color: #000;
-    font-size: 1.3rem;
-    transition: 1s all ease-in-out;
   }
   .main-navbar .navbar-container {
     flex-direction: column;
     justify-content: end;
+    align-content: center;
   }
   .main-navbar .navbar-container .logo {
     display: block;
@@ -639,32 +811,50 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
   .main-navbar .navbar-container .logo:first-child {
     margin-bottom: auto;
   }
-  .main-navbar .navbar-container .navbar-item .navbar-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  .main-navbar .navbar-container .navbar-item .navbar-link:hover {
+    border-top: 0px;
+    border-right: 3px solid #fc037b;
   }
-  .main-navbar .navbar-container .navbar-item .navbar-link img {
-    width: 30px;
+  .main-navbar .navbar-container .navbar-item .lenguage:hover {
+    border-top: 0px;
+    border-right: 3px solid #fc037b;
   }
-  main .about .about-data {
-    flex-direction: column;
+  .main-navbar .navbar-container .navbar-item .lenguage input {
+    display: none;
   }
-  main .about .about-data .iconos {
+  .main-navbar .navbar-container .navbar-item .lenguage input:checked ~ ul {
+    right: -130px;
+    top: -30px;
+  }
+  .main-navbar .navbar-container .navbar-item .lenguage ul {
+    position: absolute;
+    top: 100px;
+    right: -130px;
+  }
+  main .about .iconos {
     margin-top: 45px;
     grid-template-columns: repeat(14, 23px);
     grid-template-rows: repeat(6, 24px);
     grid-template-areas: ". . . . . . . . . . txtSass txtSass . ." "txtHtml5 txtHtml5 . . txtBootstrap txtBootstrap . . txtGit txtGit sass sass . ." "html5 html5 . . bootstrap bootstrap . . gitHb gitHb sass sass js js" "html5 html5 cs3 cs3 bootstrap bootstrap git git gitHb gitHb . . js js" ". . cs3 cs3 . . git git . . . txtJs txtJs txtJs" ". . txtCss3 txtCss3 . . txtGithub txtGithub . . . . . .";
     gap: 5px;
   }
-  main .about .about-data .iconos #txtCss3 {
+  main .about .iconos #txtCss3 {
     margin-left: 0px;
   }
-  main .about .about-data .iconos #txtSass {
+  main .about .iconos #txtSass {
     margin-left: 0px;
   }
-  main .about .about-data .iconos #txtJs {
+  main .about .iconos #txtJs {
     margin-left: 15px;
+  }
+  main .about .about-data {
+    flex-direction: column;
+  }
+  main .about .about-data img {
+    width: 40%;
+  }
+  .footer {
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -677,6 +867,7 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
     width: 100%;
     height: 80px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: visible;
   }
   .main-navbar:hover {
     width: 100%;
@@ -688,7 +879,6 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
   .main-navbar .navbar-container {
     flex-direction: row;
     justify-content: right;
-    margin-right: 100px;
   }
   .main-navbar .navbar-container .logo {
     width: 100%;
@@ -708,8 +898,15 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
   .main-navbar .navbar-container .navbar-item {
     width: 20%;
   }
+  .main-navbar .navbar-container .navbar-item .navbar-link:hover {
+    border-right: 0px;
+    border-bottom: 3px solid #fc037b;
+  }
   .main-navbar .navbar-container .navbar-item .navbar-link img {
     display: none;
+  }
+  .main-navbar .navbar-container .navbar-item .navbar-link span {
+    font-size: 1rem;
   }
   .main-navbar .navbar-container .navbar-item .navbar-link .link-text {
     display: block;
@@ -721,31 +918,45 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
     transition: all 0.1s ease;
     color: #fc037b;
   }
+  .main-navbar .navbar-container .navbar-item .lenguage {
+    margin-left: 100px;
+    margin-right: 20px;
+  }
+  .main-navbar .navbar-container .navbar-item .lenguage:hover {
+    border-right: 0px;
+    border-bottom: 3px solid #fc037b;
+  }
+  .main-navbar .navbar-container .navbar-item .lenguage input:checked ~ ul {
+    right: -10px;
+    top: 80px;
+  }
+  .main-navbar .navbar-container .navbar-item .lenguage label span {
+    display: none;
+  }
+  .main-navbar .navbar-container .navbar-item .lenguage ul {
+    position: absolute;
+    top: 80px;
+    right: -150px;
+  }
+  main .home-data .pablo {
+    margin: 85px 0px 0px 0px;
+  }
+  main .home-data p {
+    bottom: 40px;
+  }
   main .about {
     padding: 120px 0px 50px 0px;
   }
   main .about .about-data {
     flex-direction: row;
+    margin: 0 20px;
+  }
+  main .about .about-data > img {
+    width: 20%;
+    padding: 20px;
   }
   main .about .about-data .conten-about {
-    padding: 0 20px;
-  }
-  main .about .about-data .iconos {
-    margin-top: 0px;
-    grid-template-columns: repeat(8, 23px);
-    grid-template-rows: repeat(6, 39px);
-    grid-template-areas: ". . html5 html5 . txtHtml5 . ." "txtCss3 . . cs3 cs3 . . ." ". . bootstrap bootstrap . txtBootstrap . ." ". txtGit . git git . . ." ". . . . gitHb gitHb . txtGithub" "txtSass . . sass sass . . ." ". . js js . txtJs . .";
-    justify-content: center;
-    gap: 3px;
-  }
-  main .about .about-data .iconos #txtCss3 {
-    margin-left: 15px;
-  }
-  main .about .about-data .iconos #txtSass {
-    margin-left: 15px;
-  }
-  main .about .about-data .iconos #txtJs {
-    margin-left: 0px;
+    padding: 0 60px;
   }
   main .proyect {
     padding: 120px 0px 50px 0px;
@@ -784,9 +995,6 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
   }
   main .contact .contact-wrapper .contact-info .nombre {
     margin-top: 60px;
-  }
-  .footer {
-    margin-bottom: 0px;
   }
 }
 

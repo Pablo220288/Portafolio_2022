@@ -19,3 +19,32 @@ html{
 body{
     font-family: "Poppins", sans-serif;
 }
+
+//Colores Fondo
+$fondoWhite: #ffffff;
+
+//Colores Texto
+$textBlack: #000000;
+$textWhite: #ffffff;
+$textPink:#fc037b;
+
+//Colores Redes
+$colorsRedes:(
+    face:#3b5998,
+    wtsp:#25d366,
+    insta: radial-gradient(circle at 33% 100%,#fed373 4%,#f15245 30%,#d92e7f 62%,#9b36b7 85%,#515ecf),
+	in:#0e76a8,
+);
+
+::-webkit-scrollbar{
+    width: 5px;
+
+}::-webkit-scrollbar:window-inactive{
+    display: none;
+}
+::-webkit-scrollbar-track{
+    background-color:transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $textPink;   
+}
