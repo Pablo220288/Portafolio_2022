@@ -99,11 +99,11 @@
         .about-data{
             flex-direction: row;
             margin: 0 20px;
-            > img{
-                width: 20%;
-                padding: 20px;
+            .circle{
+                flex: 1;
             }
             .conten-about{
+                flex: 2;
                 padding: 0 60px;
             }
         }

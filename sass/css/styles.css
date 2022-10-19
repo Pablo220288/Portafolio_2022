@@ -260,78 +260,42 @@ main .about .about-data {
   text-align: center;
   flex-flow: column wrap;
 }
-main .about .about-data .foto {
-  width: 300px;
-  height: 300px;
+main .about .about-data .circle {
   position: relative;
-  align-self: center;
-  margin: 1.5rem;
-  transition: 400ms ease-in;
-  z-index: 100;
-}
-main .about .about-data .foto:before {
-  content: "";
-  display: block;
   width: 200px;
   height: 200px;
-  border: 8px solid #fc037b;
-  transform: translate(-20px, -22px);
-  transition: 400ms ease-in;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-main .about .about-data .foto:after {
-  content: "";
+main .about .about-data .circle .logoAbout {
   position: absolute;
-  display: block;
-  width: 200px;
-  height: 200px;
-  border: 8px solid #fc037b;
-  transform: translate(107px, -110px);
-  z-index: -10;
-  transition: 400ms ease-in;
-}
-main .about .about-data .foto span {
-  position: absolute;
-  inset: 0;
-  transition: 400ms ease-in;
-  background-image: url("../../assets/about.png");
+  width: 150px;
+  height: 150px;
+  background-image: url("../../assets/aboutDos.png");
   background-size: cover;
-  backface-visibility: hidden;
-}
-main .about .about-data .foto span:nth-child(1) {
-  clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
-  transform: perspective(200px) translateZ(-5px) translate(-2px, -2px);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  transition: filter 0.4s ease;
   filter: grayscale(1);
 }
-main .about .about-data .foto span:nth-child(2) {
-  clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
-  transform: perspective(200px) translateZ(5px) translate(2px, -2px);
-  filter: grayscale(1);
+main .about .about-data .circle .logoAbout:hover {
+  filter: grayscale(0);
 }
-main .about .about-data .foto span:nth-child(3) {
-  clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
-  transform: perspective(200px) translateZ(5px) translate(-2px, 2px);
-  filter: grayscale(1);
+main .about .about-data .circle .textAbuot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10s linear infinite;
 }
-main .about .about-data .foto span:nth-child(4) {
-  clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-  transform: perspective(200px) translateZ(-5px) translate(2px, 2px);
-  filter: grayscale(1);
-}
-main .about .about-data .foto:hover span:nth-child(1) {
-  transform: perspective(200px) translateZ(0px);
-  filter: brightness(1) saturate(1) contrast(1);
-}
-main .about .about-data .foto:hover span:nth-child(2) {
-  transform: perspective(200px) translateZ(0px);
-  filter: brightness(1) saturate(1) contrast(1);
-}
-main .about .about-data .foto:hover span:nth-child(3) {
-  transform: perspective(200px) translateZ(0px);
-  filter: brightness(1) saturate(1) contrast(1);
-}
-main .about .about-data .foto:hover span:nth-child(4) {
-  transform: perspective(200px) translateZ(0px);
-  filter: brightness(1) saturate(1) contrast(1);
+main .about .about-data .circle .textAbuot span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 100px;
+  font-family: consolas;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 main .about .about-data .conten-about {
   margin-top: 45px;
@@ -432,38 +396,6 @@ main .about .iconos .icono-items .borde img {
 main .about .iconos:hover .txtIcono {
   transition: opacity 300ms ease-out;
   opacity: 1;
-}
-main .about .circle {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-}
-main .about .circle .logoAbout {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-image: url("../../assets/aboutDos.png");
-  background-size: cover;
-  border-radius: 50%;
-  filter: grayscale(1);
-}
-main .about .circle .textAbuot {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  animation: rotateText 10s linear infinite;
-}
-main .about .circle .textAbuot span {
-  position: absolute;
-  left: 50%;
-  transform-origin: 0 100px;
-  font-family: consolas;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 main .animated {
   animation: spin 1s alternate;
@@ -831,6 +763,316 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
     transform: rotate(360deg);
   }
 }
+.wahtsapp_container {
+  display: inline-block;
+  position: fixed;
+  bottom: 0px;
+  z-index: 9999999;
+  right: 0px;
+  left: auto;
+  -webkit-animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+  animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+}
+.wahtsapp_container .wahtsapp_pop {
+  width: 54px;
+  height: 54px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
+  border-radius: 50%;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  outline: transparent;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease 0s;
+}
+.wahtsapp_container .wahtsapp_pop::before {
+  content: "1";
+  width: 15px;
+  height: 15px;
+  font-size: 0.6rem;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  color: #ffffff;
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+.wahtsapp_container .wahtsapp_pop .wahtsapp_pop_icono {
+  font-size: 1.7rem;
+  color: #4fce5d;
+  transition: color 0.3s ease 0s;
+}
+.wahtsapp_container .wahtsapp_pop:hover {
+  background-color: #4fce5d;
+}
+.wahtsapp_container .wahtsapp_pop:hover .wahtsapp_pop_icono {
+  color: #ffffff;
+}
+.wahtsapp_container .wahtsapp_pop .pulso {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #4fce5d;
+  border-radius: 500px;
+  z-index: -1;
+}
+.wahtsapp_container .wahtsapp_chat_container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  pointer-events: none;
+  touch-action: none;
+  transition: opacity 0.3s ease 0s, margin 0.3s ease 0s, visibility 0.3s ease 0s;
+  background-color: rgb(255, 255, 255);
+  transform: translate3d(0px, 0px, 0px);
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: auto;
+  margin-right: 20px;
+  visibility: hidden;
+  opacity: 0;
+  margin-bottom: 80px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #095e54;
+  padding: 24px 20px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title .title_img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title .title_img::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #4ad504;
+  border-radius: 50%;
+  border: 2px solid #095e54;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title .title_img img {
+  width: 100%;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title .title_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 16px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title .title_text .title_text_name {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat_title .title_text .title_text_subname {
+  font-size: 13px;
+  color: #ffffff;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat {
+  width: 100%;
+  padding: 20px 20px 20px 10px;
+  background-color: rgb(230, 221, 212);
+  position: relative;
+  overflow: auto;
+  max-height: 382px;
+  background-image: url("../../assets/fondo.png");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container {
+  width: 240px;
+  padding: 7px 14px 6px;
+  background-color: #ffffff;
+  border-radius: 0px 8px 8px;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  transition: display 0.3s ease 0s;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container:nth-child(1) {
+  display: none;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container:nth-child(1):before {
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/chat.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0px;
+  left: -12px;
+  width: 12px;
+  height: 19px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container:nth-child(2) {
+  display: none;
+  border-radius: 8px 8px;
+  gap: -10px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container:nth-child(3) {
+  width: 54px;
+  padding: 8px;
+  display: flex;
+  border-radius: 8px 8px;
+  gap: -10px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_title {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_txt {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 4px;
+  color: rgb(17, 17, 17);
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_hs {
+  align-self: flex-end;
+  text-align: right;
+  margin-top: -5px;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(17, 17, 17, 0.5);
+  margin-right: -8px;
+  margin-bottom: -4px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_dots_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_dots_container .chat_dots {
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: dots 1.2s linear infinite;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_dots_container .chat_dots:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .chat_container .chat_dots_container .chat_dots:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .visible {
+  display: flex !important;
+}
+.wahtsapp_container .wahtsapp_chat_container .wahtsapp_chat .hidden {
+  display: none !important;
+}
+.wahtsapp_container .show {
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 96px;
+}
+.wahtsapp_container .wahtsapp_send {
+  width: 100%;
+  padding: 20px;
+}
+.wahtsapp_container .wahtsapp_send .wahtsapp_send_enlace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #14c656;
+  padding: 8px 0px;
+  border-radius: 50px;
+  pointer-events: all;
+}
+.wahtsapp_container .wahtsapp_send .wahtsapp_send_enlace .wahtsapp_send_txt {
+  cursor: pointer;
+}
+
+@keyframes dots {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.animate {
+  animation: latido 2s linear;
+}
+
+@keyframes latido {
+  0% {
+    width: 54px;
+    height: 54px;
+    border: 3px solid #4fce5d;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    border: 3px solid transparent;
+  }
+}
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media only screen and (min-width: 600px) {
   main {
     margin-left: 70px;
@@ -1000,11 +1242,11 @@ main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
     flex-direction: row;
     margin: 0 20px;
   }
-  main .about .about-data > img {
-    width: 20%;
-    padding: 20px;
+  main .about .about-data .circle {
+    flex: 1;
   }
   main .about .about-data .conten-about {
+    flex: 2;
     padding: 0 60px;
   }
   main .proyect {
