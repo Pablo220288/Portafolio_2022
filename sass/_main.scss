@@ -520,6 +520,7 @@ main{
                     margin-top: 20px;
                     i{
                         font-size: 25px;
+                        transition: color 500ms ease-out, transform 500ms ease-out;
                     }
                     img{
                         align-self: center;
@@ -542,28 +543,23 @@ main{
                     }
                     .bi-facebook{
                         &:hover{
-                            transition: all 500ms ease-out;
                             color:map-get($colorsRedes, face);
                             transform: scale(1.3);
                         }
                     }
-                    .bi-instagram{
-                         &:hover{
-                            transition: all 500ms ease-out;
-                            background: map-get($colorsRedes, insta);
-                            -webkit-text-fill-color: transparent;
-                            -webkit-background-clip: text;
+                    .bi-github{
+                        &:hover{
+                            color:map-get($colorsRedes, git);
+                            transform: scale(1.3);
                         }
                     }
                     .bi-whatsapp{
                         &:hover{
-                            transition: all 500ms ease-out;
                             color:map-get($colorsRedes, wtsp)
                         }
                     }
                     .bi-linkedin{
                         &:hover{
-                            transition: all 500ms ease-out;
                             color:map-get($colorsRedes, in)
                         }
                     }

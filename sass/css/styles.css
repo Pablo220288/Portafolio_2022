@@ -658,6 +658,7 @@ main .contact .contact-wrapper .contact-info .redes {
 }
 main .contact .contact-wrapper .contact-info .redes i {
   font-size: 25px;
+  transition: color 500ms ease-out, transform 500ms ease-out;
 }
 main .contact .contact-wrapper .contact-info .redes img {
   align-self: center;
@@ -679,22 +680,17 @@ main .contact .contact-wrapper .contact-info .redes svg {
   fill: #000000;
 }
 main .contact .contact-wrapper .contact-info .redes .bi-facebook:hover {
-  transition: all 500ms ease-out;
   color: #3b5998;
   transform: scale(1.3);
 }
-main .contact .contact-wrapper .contact-info .redes .bi-instagram:hover {
-  transition: all 500ms ease-out;
-  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+main .contact .contact-wrapper .contact-info .redes .bi-github:hover {
+  color: #ff8000;
+  transform: scale(1.3);
 }
 main .contact .contact-wrapper .contact-info .redes .bi-whatsapp:hover {
-  transition: all 500ms ease-out;
   color: #25d366;
 }
 main .contact .contact-wrapper .contact-info .redes .bi-linkedin:hover {
-  transition: all 500ms ease-out;
   color: #0e76a8;
 }
 
