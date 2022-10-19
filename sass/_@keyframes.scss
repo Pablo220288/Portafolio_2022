@@ -40,3 +40,24 @@
         transform: rotate(360deg);
     }
 }
+
+  //Animacion About
+  @keyframes rotateText {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+  //Animacion About
+  @keyframes rotateTextDos {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

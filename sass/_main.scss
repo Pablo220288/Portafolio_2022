@@ -150,22 +150,22 @@ main{
                     &:nth-child(1){
                         clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
                         transform:perspective(200px) translateZ(-5px) translate(-2px, -2px);
-                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                        filter: grayscale(1);
                     }
                     &:nth-child(2){
                         clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
                         transform: perspective(200px) translateZ(5px) translate(2px, -2px);
-                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                        filter: grayscale(1);
                     }
                     &:nth-child(3){
                         clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
                         transform: perspective(200px) translateZ(5px) translate(-2px, 2px);
-                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                        filter: grayscale(1);
                     }
                     &:nth-child(4){
                         clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
                         transform: perspective(200px) translateZ(-5px) translate(2px, 2px);
-                        filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                        filter: grayscale(1);
                     }
                 }
                 &:hover span:nth-child(1){
@@ -293,6 +293,39 @@ main{
             &:hover .txtIcono{
                 transition: opacity 300ms ease-out;
                 opacity: 1;
+            }
+        }
+        .circle{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            //background: cadetblue;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            .logoAbout{
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                background-image: url("../../assets/aboutDos.png");
+                background-size: cover;
+                border-radius: 50%;
+                filter: grayscale(1);
+            }
+            .textAbuot{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                animation: rotateText 10s linear infinite;
+                span{
+                    position: absolute;
+                    left: 50%;
+                    transform-origin: 0 100px;
+                    font-family: consolas;
+                    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+                }
             }
         }
     }
@@ -580,6 +613,7 @@ main{
                         &:hover{
                             transition: all 500ms ease-out;
                             color:map-get($colorsRedes, face);
+                            transform: scale(1.3);
                         }
                     }
                     .bi-instagram{
