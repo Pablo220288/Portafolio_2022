@@ -474,11 +474,23 @@ main .hero-section .card-grid .card .mbTrainer {
 main .hero-section .card-grid .card .mahalo {
   background-image: url("../../assets/mahalo.jpg");
 }
-main .hero-section .card-grid .card .paralax {
-  background-image: url("../../assets/paralax.jpg");
+main .hero-section .card-grid .card .starbene {
+  background-image: url("../../assets/starbene.jpg");
 }
-main .hero-section .card-grid .card .porfolio {
-  background-image: url("../../assets/porfolio.jpg");
+main .hero-section .card-grid .card .bouquets {
+  background-image: url("../../assets/bouquets.jpg");
+}
+main .hero-section .card-grid .card .game2022 {
+  background-image: url("../../assets/game2022.jpg");
+}
+main .hero-section .card-grid .card .monamie {
+  background-image: url("../../assets/monamie.jpg");
+}
+main .hero-section .card-grid .card .oceanTravel {
+  background-image: url("../../assets/oceanTravel.jpg");
+}
+main .hero-section .card-grid .card .backend {
+  background-image: url("../../assets/backend.jpg");
 }
 main .hero-section .card-grid .card:hover .card__background {
   transform: scale(1.01) translateZ(0);
